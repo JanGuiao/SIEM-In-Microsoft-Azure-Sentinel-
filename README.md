@@ -48,14 +48,15 @@ Create Network Security Group <br>
 Delete default inbound rule and add new <br>
 Name: *ex: honeypot* <br>
 Source: Any | Source Port: * | Destination: Any | Service: Custom | Destination port ranges: * | Protocol: Any | Action: Allow | Priority: 100 | Name: DANGER_ANY <br>
- ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/85cd0e4f-133d-469e-9fd4-25810c3c81b8)
+
+![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/85cd0e4f-133d-469e-9fd4-25810c3c81b8)
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/3465f867-d4f6-4055-9945-cf4a8ab92145)
 
 
-Disable Boot Diagnostics
+- Disable Boot Diagnostics
   
-  ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/8d050c3f-2a4a-44ac-84a8-0adbdd9797a0)
+![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/8d050c3f-2a4a-44ac-84a8-0adbdd9797a0)
 
 
 
@@ -74,7 +75,7 @@ Disable Boot Diagnostics
 
 ## Enabling VM log gathering in Microsoft Defender for Cloud
 
--Microsoft Defender for Cloud
+- Microsoft Defender for Cloud
 Access Microsoft Defender <br>
 Under Environment Settings find your Tenant Root Group with the installed features/resources <br>
 - Enable Defender plans for *Foundational CSPM* & *Servers* In CSPM
@@ -97,23 +98,24 @@ Under Environment Settings find your Tenant Root Group with the installed featur
 
 ## Setup Microsoft Sentinel
 
--Headover to Microsoft Sentinel
+- Headover to Microsoft Sentinel
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/363bb198-9bd1-41a4-b7d9-c505cdd87c80)
 
-- Create Sentinel via workspace *ex: HoneypotLab* 
+- Create Sentinel via workspace *ex: HoneypotLab*
+- 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/2f468548-298f-4528-8fa9-87a8715c4575)
 
 
 
 ##  Log into VM with Remote Desktop (failed logons)
 
-On your Default Desktop open Remote Desktop Connection and connect via IP | Username & Password *fail a logon attempt at least once for Event Viewer to capture failed logon entry*
+- On your Default Desktop open Remote Desktop Connection and connect via IP | Username & Password *fail a logon attempt at least once for Event Viewer to capture failed logon entry*
 
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/c94c853f-1ec3-43c0-90bc-52380d95d99e)
 
--Login via RDP with credentials (Username & Password) *fail login once for log event viewer purposes*
+- Login via RDP with credentials (Username & Password) *fail login once for log event viewer purposes*
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/bbca54f9-0cb8-410a-b61b-d96be04e547b)
 
@@ -129,19 +131,21 @@ On your Default Desktop open Remote Desktop Connection and connect via IP | User
 
 ## Turn off Firewall on VM and ping VM
 
-*Turn off Firewall state in Domain | Private | Public to create successful connectivity between VM*
+- Turn off Firewall state in Domain | Private | Public to create successful connectivity between VM
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/ab2dc0ed-07b4-49fa-ba7e-ca39c7c41b0a)
 
-*Ping VM
+- Ping VM
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/a08ef48b-7ca3-45c0-ba48-09d32e31ad55)
 
 
 ## PowerShell Script & Geolocation API Key
 
-*We're going to need the API key for the script"
-Create an account through ipgeolocation.io and retrieve API key in profile settings 
+- Create an account through ipgeolocation.io and retrieve API key in profile settings 
+
+*We're going to need the API key for the script*
+
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/3daec94b-ad4d-4575-90e3-70cddc7721b0)
 
@@ -156,12 +160,15 @@ Create an account through ipgeolocation.io and retrieve API key in profile setti
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/281627d4-ead4-4c57-baf5-1d94857f46f2)
 
 - Ran script; pulled my first failed logon attempt
+- 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/17e6288c-393b-4c13-8fe0-08a3779836f0)
 
-*When script is run, failed_rdp log is created in the C:\ProgramData directory
+*When script is run, failed_rdp log is created in the C:\ProgramData directory*
+
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/c1a040f4-b76e-4b77-b5a1-dc73f77d8343)
 
-*updated version of failed_rdp.log entries
+*updated version of failed_rdp.log entries*
+
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/90c0fa65-f7ca-4a68-8fa6-912698566326)
 
 
@@ -172,42 +179,43 @@ Create an account through ipgeolocation.io and retrieve API key in profile setti
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/079403c8-47c9-43e6-87d1-49bd8a664cfe)
 
-* Records inside failed_rdp.log file*
+*Records inside failed_rdp.log file*
+
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/48121d75-437d-4a1f-9ae3-7c81a51601a4)
 
 *Asking for the type of environment and path the failed_rdp.log file is located*
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/2911a619-53f5-48ad-ba79-58e3e6f7b315)
 
-*Name your log* *my actual ex: FAILED_RDP_WITH_GEO_CL (CL is automatically attached at the end)*
+- Name your log *my actual ex: FAILED_RDP_WITH_GEO_CL (CL is automatically attached at the end)*
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/e0e34f71-3660-4aab-9d42-4bf69b620f9a)
 
 
 ## View logs and failed entries | security events
 
-*In Microsoft Sentinel, under Logs, we are querying the logs via security events
+- In Microsoft Sentinel, under Logs, we are querying the logs via security events
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/0b4f0c6b-3e01-48ab-91e4-829b9b7ada98)
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/fae4122c-45e3-45c1-9643-be6fb274076c)
 
-SecurityEvent query servers as an Event Viewer in Microsoft Azure as related to the Windows Event Viewer (VM)
+- SecurityEvent query servers as an Event Viewer in Microsoft Azure as related to the Windows Event Viewer (VM)
 
 
 
 ## Setting up Workbook Map | Editing Logs Query
 
-- Create new Workbook Query
-Remove default widgets
+- Create new Workbook Query <br>
+Remove default widgets <br>
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/82b92f55-07a8-4fbc-b7e2-7e75c24602ff)
 
-*Make sure your workspace is attached
+- Make sure your workspace is attached
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/d79ddd53-c79a-498d-a7bb-958b2877ac08)
 
-*Configure KQL & Run
+- Configure KQL & Run
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/e5bab19d-fe2f-4efc-95f4-a48db2692bb0)
 
@@ -218,7 +226,7 @@ Remove default widgets
 - To visualize the query as a map, change the setting under **Visualization** as *Map*
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/b7484f25-4eec-4fd9-8775-bb174eaa6217)
 
-Map Settings to show Latitude/Longitude
+- Map Settings to show Latitude/Longitude
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/9ca44a13-35ee-40c7-b544-7a2ab4ecd331)
 
@@ -228,13 +236,16 @@ Metric Value: event_count <br>
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/1be6117e-8f3e-4ee2-ab7c-a8564ba01498)
 
-Overview of Failed RDP Attempts *not limited to* **India** , **Cambodia** **United States** (my failed attempts)
+- Overview of Failed RDP Attempts *not limited to* **India** , **Cambodia** **United States** (my failed attempts)
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/333d82fb-c61e-4c05-91ff-0e94d9d16b33)
 
 
+Time Elapsed: 5 hours <br>
+Germany joins! <br>
+
+![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/7d119cff-3595-49d8-ac21-0b275b9a9302)
 
 
-##
 
 
