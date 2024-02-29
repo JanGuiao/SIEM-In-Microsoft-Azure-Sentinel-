@@ -90,6 +90,7 @@ Under Environment Settings find your Tenant Root Group with the installed featur
 ## Connect Log Analytics to VM to "ALL"
 
 - Set Log Analytics Agent *On* to view *All Events* under LogAnalyticsWorkspace-honeypot
+
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/33f3a4c3-400c-4759-93b4-f6bc62b36edf)
 
 
@@ -103,7 +104,7 @@ Under Environment Settings find your Tenant Root Group with the installed featur
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/363bb198-9bd1-41a4-b7d9-c505cdd87c80)
 
 - Create Sentinel via workspace *ex: HoneypotLab*
-- 
+
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/2f468548-298f-4528-8fa9-87a8715c4575)
 
 
@@ -160,7 +161,7 @@ Under Environment Settings find your Tenant Root Group with the installed featur
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/281627d4-ead4-4c57-baf5-1d94857f46f2)
 
 - Ran script; pulled my first failed logon attempt
-- 
+
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/17e6288c-393b-4c13-8fe0-08a3779836f0)
 
 *When script is run, failed_rdp log is created in the C:\ProgramData directory*
@@ -224,6 +225,7 @@ Remove default widgets <br>
 ## Configuring Map Settings
 
 - To visualize the query as a map, change the setting under **Visualization** as *Map*
+  
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/b7484f25-4eec-4fd9-8775-bb174eaa6217)
 
 - Map Settings to show Latitude/Longitude
@@ -241,8 +243,8 @@ Metric Value: event_count <br>
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/333d82fb-c61e-4c05-91ff-0e94d9d16b33)
 
 
-Time Elapsed: 5 hours <br>
-Germany joins! <br>
+- Time Elapsed: 5 hours <br>
+*Germany joins!* <br>
 
 ![image](https://github.com/JanGuiao/SIEM-In-Microsoft-Azure-Sentinel-/assets/95273542/7d119cff-3595-49d8-ac21-0b275b9a9302)
 
